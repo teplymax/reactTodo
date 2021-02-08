@@ -1,0 +1,11 @@
+* {
+  z-index: 1;
+}
+.App {
+  max-width: 746px;
+  max-height: 529px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}

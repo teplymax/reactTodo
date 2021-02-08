@@ -1,0 +1,25 @@
+.add-item {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  color: #767676;
+  cursor: pointer;
+  padding: 0 12px;
+  height: 17px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15px;
+
+  color: #b4b4b4;
+  i {
+    margin-right: 20px;
+    font-size: 16px;
+    width: 10px;
+    color: #b4b4b4;
+  }
+}

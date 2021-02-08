@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {connect} from 'react-redux';
+import Context from './context'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.scss';
+import Sidebar from './Components/Sidebar/Sidebar';
+import Tasks from './Components/Tasks/Tasks'
+
+function  App()  {
+  let[showForm,setShowForm]=React.useState(false);
+  
+  const closeForm=()=>{
+    let newState=false;
+    setShowForm(newState);
 }
 
-export default App;
+const toggleForm=()=>{
+  let newState=!showForm;
+    setShowForm(newState);
+}
+
+  return (
+    <Context.Provider value={{toggleForm,closeForm,showForm}}>
+    <div className="App">
+      <Sidebar />
+      <Tasks/>
+    </div>
+    </Context.Provider>
+  );
+  
+}
+
+export default connect(null,null)(App);
